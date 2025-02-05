@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>Valentine's Surprise</title>
+    <style>
+        body  {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            color: #d63384;
+            padding:20px;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5cm;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+            color: red
+        }
+        keyframes heartbeat {
+            0% { transform: scale (1); }
+            50% { transform: scale (1.2); }
+            100% { transform: scale (1); }
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .surprise-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .surprise-btn:hover{
+            background-color: #e63950;
+        }
+        #surprise-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #c2185b;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform translateY(0); }
+        }
+        /*Falling Hearts */
+        .falling-hearts {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh); opacity: 1;}
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="file:///C:/Users/63921/Downloads/Love Dont Change - Jeremih (Lyrics).mp3" </audio>
+
+    <h1> Happy Valentines's Day <span class="heart">❤</span></h1>
+    <p> Hi Baby, every moment with you is special. Here's a little surprise just for you, only you.</p>
+
+    <!-- Photo Gallery -->
+    <div class="gallery">
+        <img src="file:///C:/Users/63921/Downloads/ཐིཋྀ˖ ࣪⊹ 🪽.jpg" alt="Memory 1">
+        <img src="file:///C:/Users/63921/Downloads/0ddc0882-83aa-4eed-95e7-ddad3433b9ec.jpg" alt="Memory 2">
+        <img src="file:///C:/Users/63921/Downloads/download.jpg" alt="Memory 3">
+    </div>
+
+    <!-- Surprise Button -->
+    <button class="surprise-btn" oneclick="showSurprise()">Click for a Surprise</button>
+
+    <!-- Surprise Button -->
+    <div id="surprise-message">
+        <h2> hi baby, happy valentine's day gorgeous sana magustuhan mo yung mga gifts ko sayo,
+        ang hirap pala talaga maghanap ng gift baka kasi hindi mo magustuhan thanks sa tulong
+        ni morganna hindi ako nahihirapan sa pagpili sayang hindi yun ang nabili ko naubusan kasi
+        ng stock so naghanap ako ng bago na pareho dun sa first na napili ko.
+        nagustohan mo pa ba? i hope yes iiyak ako pag hindi,
+        pinagpuyatan ko yan pati itong ginawa kong website pinaghirapan ko dapat magustohan
+        mo kasi love mo naman ako and and and please take care always
+        HAPPY VALENTINE'S MY LOVE, I LOVE YOU SO MUCH.
+
+        ps: wag ka po magalit '3' </p>
+    </div>
+
+    <script>
+        function showSurprise() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "♥";
+            document.body.appendChild(heart);
+
+            let starPosition = Math.random() * window.innerWidth;
+            let animationDuration = Math.random() * = 3 + 2; // Between 2-5 seconds
+            let heartSize = Math.random() * 15 + 10; // Random Size
+
+            heart.style.left = startPosition + "px";
+            heart.style.fontSize = heartSize + "px":
+            heart.style.animationDuration = animationDuration + "s";
+
+            setTimeout() => {
+                heart.remove();
+        },
